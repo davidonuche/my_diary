@@ -12,14 +12,26 @@ class SettingsScreen extends StatelessWidget {
         child: Column(
       children: [
         SizedBox(height: 10),
-        Text('User Name', style: Get.textTheme.headlineLarge),
+        Text('user_name'.tr, style: Get.textTheme.headlineLarge),
         SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            ElevatedButton(onPressed: () {}, child: Text("RU")),
-            ElevatedButton(onPressed: () {}, child: Text("ESP")),
-            ElevatedButton(onPressed: () {}, child: Text("ENG")),
+            ElevatedButton(
+                onPressed: () {
+                  Get.updateLocale(Locale("ru", "RU"));
+                },
+                child: Text("RU")),
+            ElevatedButton(
+                onPressed: () {
+                  Get.updateLocale(Locale("esp", "ESP"));
+                },
+                child: Text("ESP")),
+            ElevatedButton(
+                onPressed: () {
+                  Get.updateLocale(Locale("en", "US"));
+                },
+                child: Text("ENG")),
           ],
         ),
         SizedBox(height: 10),
@@ -27,7 +39,7 @@ class SettingsScreen extends StatelessWidget {
             onPressed: () {
               Get.to(() => ChangeUsernameScreen());
             },
-            child: Text("Change User Name")),
+            child: Text("change_username".tr)),
       ],
     ));
   }

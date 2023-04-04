@@ -18,16 +18,14 @@ class _ChangeUsernameScreenState extends State<ChangeUsernameScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
-              onChanged: (value) {
-                // TODO:- Change username here if value is not != "",
-              },
+              onChanged: (value) {},
             ),
             SizedBox(height: 20),
             ElevatedButton(
                 onPressed: () {
                   Get.back();
                 },
-                child: Text("Change Username")),
+                child: Text("change_username".tr)),
           ],
         ),
       ),

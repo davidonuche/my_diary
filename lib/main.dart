@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_diary/diary_tab_bar_view.dart';
+import 'models/locales.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +15,14 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          appBarTheme: AppBarTheme(backgroundColor: Colors.deepPurple),
-          colorScheme: ColorScheme.fromSwatch(
-            primarySwatch: Colors.lime,
-          )),
+        appBarTheme: AppBarTheme(backgroundColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.lime,
+        ),
+      ),
       home: DiaryTabBarView(),
+      translations: Locales(),
+      locale: Locale("en", "US"),
     );
   }
 }

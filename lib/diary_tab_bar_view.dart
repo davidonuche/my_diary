@@ -18,6 +18,7 @@ class _DiaryTabBarViewState extends State<DiaryTabBarView> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          title: Text("diary".tr, style: TextStyle(color: Colors.white)),
           actions: [
             IconButton(
                 onPressed: () {
@@ -34,18 +35,14 @@ class _DiaryTabBarViewState extends State<DiaryTabBarView> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               TextField(
-                                onChanged: (value) {
-                                  //TODO:- Change entry text
-                                },
+                                onChanged: (value) {},
                               ),
                               SizedBox(height: 8),
                               ElevatedButton(
                                   onPressed: () {
-                                    //TODO:- Add new entry
-                                    // Closes bottom sheet
                                     Get.back();
                                   },
-                                  child: Text("Add")),
+                                  child: Text("add".tr)),
                             ],
                           ),
                         );
