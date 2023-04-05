@@ -16,15 +16,35 @@ class DiaryScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(15.0),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(_diaryController.diaryEntries[index].dateString,
-                              style: Get.textTheme.headlineSmall),
-                          SizedBox(height: 5),
-                          Text(_diaryController.diaryEntries[index].content,
-                              style: Get.textTheme.headlineSmall),
-                        ]),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                    _diaryController
+                                        .diaryEntries[index].dateString,
+                                    style: Get.textTheme.headlineSmall),
+                                SizedBox(height: 5),
+                                Text(
+                                    _diaryController
+                                        .diaryEntries[index].content,
+                                    style: Get.textTheme.headlineSmall),
+                              ]),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            _diaryController.deleteDiaryEntry(index);
+                          },
+                          icon: Icon(
+                            Icons.delete,
+                            color: Colors.red,
+                            size: 30,
+                          ),
+                        )
+                      ],
+                    ),
                   );
                 },
                 separatorBuilder: (context, index) => Divider(
