@@ -17,11 +17,11 @@ class DiaryController extends GetxController {
   void onInit() {
     final List<dynamic> list = _getStroage.read("diary_entries") ?? [];
     List<DiaryEntry> data = [];
-    for (var element in list) {
+    list.forEach((element) {
       final String date = element["dateTime"];
       final String content = element["content"];
       data.add(DiaryEntry(dateString: date, content: content));
-    }
+    });
     _diaryEntries.value = data;
     super.onInit();
   }

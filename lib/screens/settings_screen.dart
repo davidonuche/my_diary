@@ -15,8 +15,8 @@ class SettingsScreen extends StatelessWidget {
         child: Column(
       children: [
         SizedBox(height: 10),
-        // This is an observer - reactive widget in Getx.
-        // automatically rebuilds when observable (username) changes.
+        // This is an observer - reactive widget in Getx
+        // automatically rebuild when observalbe (username) changes.
         Obx(() => Text(
               _userController.username,
               style: Get.textTheme.headlineLarge,

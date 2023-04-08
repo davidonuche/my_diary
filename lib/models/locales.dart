@@ -4,19 +4,19 @@ class Locales extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         "en_US": {
-          "Change_Username": "Change Username",
+          "change_username": "Change Username",
           "diary" : "My Diary",
-          "Add" : "Add",
+          "add" : "Add",
         },
         "ru_RU": {
-          "Change_Username": "Изменить имя пользователя",
+          "change_username": "Изменить имя пользователя",
           "diary" : "Мой дневник",
-          "Add" : "Добавить",
+          "add" : "Добавить",
         },
         "esp_ESP": {
-          "Change_Username": "Cambie el nombre de usuario",
+          "change_username": "Cambie el nombre de usuario",
           "diary" : "Mi Diario",
-          "Add" : "Añadir",
+          "add" : "Añadir",
         },
       };
 }
